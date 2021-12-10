@@ -3,11 +3,11 @@
 
 # Wecome Friends to my first react project. I hope you enjoy it.
 
-##  this is an E-commerce single Page.
+##  this is an E-commerce single Page made to test and show my skills in front end.
 
 # Elkoss
 
-  ![Logo](https://raw.githubusercontent.com/ArielLuna1983/stackblitz-react-Elkoss/main/public/media/Logo.png)
+  ![Logo](https://firebasestorage.googleapis.com/v0/b/elkoss-8673f.appspot.com/o/Logo.png?alt=media&token=0c4665b6-f2fb-4c86-9363-f8fdc9cca7e1)
 
 
 ## 🛠 Skills
@@ -22,7 +22,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/ArielLuna1983/stackblitz-react-Elkoss/main/public/media/Animation-Elkoss.gif)
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/elkoss-8673f.appspot.com/o/Animation-Elkoss.gif?alt=media&token=dc801db3-6e9d-4235-be9f-3cdbf5f82f85)
 
 
 ## Authors
@@ -31,6 +31,4 @@
 
 # react-rruv1y
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-rruv1y)
-
-[Find it on GitHUb ](https://github.com/ArielLuna1983/stackblitz-react-Elkoss)
+[Find it on GitHUb ](https://github.com/ArielLuna1983/elkoss-alliance-react)
