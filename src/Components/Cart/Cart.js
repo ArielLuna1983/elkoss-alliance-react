@@ -16,14 +16,14 @@ const Cart = () =>{
         </div>
         {cart.map((item)=>
             <Card style={{ width: '18rem' }} border="info" className="col-m-3 m-1" bg="dark" variant="dark">
-                <Card.Img  className="mt-2 mx-auto renderCard" variant="top" src={item.imagen} alt={item.nombre}/>
+                <Card.Img  className="mt-1 mx-auto renderCard" variant="top" src={item.imagen} alt={item.nombre}/>
                 <Card.Body className="text-secondary">
                     <Card.Title>{item.nombre}</Card.Title>
                     <Card.Text>{item.desc}</Card.Text>
-                    <Card.Subtitle className="mb-3 text-success">${item.precio}</Card.Subtitle>
+                    <Card.Subtitle className="mb-1 text-success">${item.precio}</Card.Subtitle>
                     <Card.Text className="text-info">{item.cantidad} compradas</Card.Text>
                 </Card.Body>
-                <button type="button" class="btn btn-danger mb-4" onClick={() => onRemove(item.id)}>Eliminar compra <MdDelete/></button>
+                <button type="button" class="btn btn-danger mb-2" onClick={() => onRemove(item.id)}>Eliminar compra <MdDelete/></button>
             </Card>
             )}
             </div>
@@ -33,7 +33,7 @@ const Cart = () =>{
         <>
         <div className="text-center">
             <h1 className="text-light mt-5">No hay Items en tu carrito</h1>
-            <Button as={Link} to='/' variant="outline-light" className='mt-3'>Ir a Comprar</Button>
+            <Button as={Link} to='/' variant="outline-light" className='mt-3'>Volver a la Tienda</Button>
         </div>
         </>
     )}
