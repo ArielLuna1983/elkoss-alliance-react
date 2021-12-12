@@ -36,8 +36,6 @@ const CartFunction = ({children}) =>{
         setTotal(total - myItem.subtotal);    
     };
     const onClear = (id) => {
-        const myItem = cart.find((item) => item.id === id);
-        const cartAux = cart.filter((item) => item.id !== id);
         setCart([])
         setTotal(0)
         setUnidades(0)

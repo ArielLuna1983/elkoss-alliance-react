@@ -3,20 +3,17 @@ import { useState } from 'react'
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { Context } from '../../Context/CartContext'
 import { getFirestoreDb } from '../../data/firebaseConfig';
+import Swal from 'sweetalert2/src/sweetalert2.js'
 
 const formContact = () => {
-
+    const {cart, onClear} = useContext(Context)
     const [uName, setUName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [message, setMessage] = useState('');
-
-    const {cart, onClear} = useContext(Context)
-
     const db = getFirestoreDb();
-    
         const onSubmit = async (e) => {
             try {
                 e.preventDefault();
@@ -38,7 +35,14 @@ const formContact = () => {
             } catch (error) {
                 console.log(error)
             } finally {
-                alert('Tu Compra ha sido realizada')
+                Swal.fire({
+                    position: 'top-center',
+                    background: '<i class="bg.dark"></i>',
+                    icon: 'success',
+                    title: 'Confirmado',
+                    text: 'Tu compra esta en camino',
+                    confirmButtonText: '<a href="/">Confirmado</a>',
+                })
                 cleanData();
                 onClear();
             }
@@ -51,7 +55,6 @@ const formContact = () => {
             setAddress('');
             setMessage('');
     }
-
 return(
     <>
     <div className="container mx-auto mt-3 mb-5">
@@ -62,7 +65,6 @@ return(
                     <input type="text" className="form-control bg-dark text-light" 
                     id="inputNombre"
                     placeholder="Pon tu Nombre"
-                    required
                     value={uName}
                     onChange={(e) =>{
                         setUName(e.target.value)
@@ -74,7 +76,6 @@ return(
                     <input type="text" className="form-control bg-dark text-light"
                     id="inputLastName"
                     placeholder="Apellido"
-                    required
                     value={lastName}
                     onChange={(e) =>{
                         setLastName(e.target.value)
@@ -86,7 +87,6 @@ return(
                     <input type="text" className="form-control bg-dark text-light"
                     id="inputPhone"
                     placeholder="Telefono"
-                    required
                     value={phone}
                     onChange={(e) =>{
                         setPhone(e.target.value)
@@ -100,7 +100,6 @@ return(
                     <input type="email" className="form-control bg-dark text-light"
                     id="inputEmail"
                     placeholder="E-mail"
-                    required
                     value={email}
                     onChange={(e) =>{
                         setEmail(e.target.value)
@@ -112,7 +111,6 @@ return(
                     <input type="text" className="form-control bg-dark text-light"
                     id="inputAddress"
                     placeholder="Calle, Altura, Ciudad, Estado, departamento, codigo postal, etc"
-                    required
                     value={address}
                     onChange={(e) =>{
                         setAddress(e.target.value)
@@ -124,7 +122,6 @@ return(
                     <input type="text" className="form-control bg-dark text-light"
                     id="inputMessage"
                     placeholder="Mensaje"
-                    required
                     value={message}
                     onChange={(e) =>{
                         setMessage(e.target.value)
@@ -133,8 +130,9 @@ return(
                 </div>
             </div>
 
-            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit} disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "")}
-            >Guardar</button>
+            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit}
+            disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "")}>
+            Guardar</button>
         </form>
         </div>
     </>

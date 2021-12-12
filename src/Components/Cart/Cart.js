@@ -10,7 +10,10 @@ const Cart = () =>{
     return unidades > 0 ?(
         <>
         <div className="container justify-center d-flex mx-auto row bg-dark text-light">
-        <h3 className="text-light">El total del carrito es {total} y tenes {unidades} unidades</h3>
+        <div className="text-light text-center">
+            <h5>Tu compre es de  <span className='text-info'>{unidades} unidades</span></h5>
+            <h4>Por un total de <span className='text-success'>${total}</span></h4>
+        </div>
         {cart.map((item)=>
             <Card style={{ width: '18rem' }} border="info" className="col-m-3 m-1" bg="dark" variant="dark">
                 <Card.Img  className="mt-2 mx-auto renderCard" variant="top" src={item.imagen} alt={item.nombre}/>
@@ -29,8 +32,8 @@ const Cart = () =>{
     ) : (
         <>
         <div className="text-center">
-        <h1 className="text-light mt-5">No hay Items en tu carrito</h1>
-        <Button as={Link} to='/' variant="outline-light" className='mt-3'>Ir a Comprar</Button>
+            <h1 className="text-light mt-5">No hay Items en tu carrito</h1>
+            <Button as={Link} to='/' variant="outline-light" className='mt-3'>Ir a Comprar</Button>
         </div>
         </>
     )}

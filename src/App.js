@@ -6,6 +6,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import {CartFunction} from './Context/CartContext'
 import Cart from './Components/Cart/Cart'
+import '@sweetalert2/theme-dark/dark.css';
 
 
 export default function App() {

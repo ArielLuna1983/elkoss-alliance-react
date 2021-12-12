@@ -29,7 +29,7 @@ const ItemCount = (props) => {
 
     return(
         <>
-        <div>
+        <div className='mb-5'>
             <div className="d-flex flex-row text-center w-25 mb-3">
             <button onClick={handleStock.restaStock} className="btn btn-outline-danger ICButton">-</button>
             <p className="col">{unidades}</p>
