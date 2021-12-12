@@ -14,6 +14,5 @@ const CartWidget = () => {
             <Button as={Link} to='/cart' variant='outline-light'>{unidades} <MdShoppingCart size={'30px'}/></Button>
         </div>
         </>
-    ))
-}
+    ))}
 export default CartWidget;

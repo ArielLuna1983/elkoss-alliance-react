@@ -7,11 +7,11 @@ import {Link} from 'react-router-dom'
 
 const Cart = () =>{
     const {cart, unidades, total, onRemove} = useContext(Context);
-    return unidades > 0 ?(
+    return (unidades > 0 ?(
         <>
         <div className="container justify-center d-flex mx-auto row bg-dark text-light">
-        <div className="text-light text-center">
-            <h5>Tu compre es de  <span className='text-info'>{unidades} unidades</span></h5>
+        <div className="text-light text-center mt-3 mb-3">
+            <h5>Tu compre es de <span className='text-info'>{unidades} unidades</span></h5>
             <h4>Por un total de <span className='text-success'>${total}</span></h4>
         </div>
         {cart.map((item)=>
@@ -36,7 +36,7 @@ const Cart = () =>{
             <Button as={Link} to='/' variant="outline-light" className='mt-3'>Volver a la Tienda</Button>
         </div>
         </>
-    )}
+    ))}
 
 export default Cart
             
