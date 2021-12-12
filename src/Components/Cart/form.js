@@ -62,79 +62,36 @@ return(
             <div className="form-row row">
                 <div className="form-group col-md-4">
                     <label for="inputName">Nombre</label>
-                    <input type="text" className="form-control bg-dark text-light" 
-                    id="inputNombre"
-                    placeholder="Pon tu Nombre"
-                    value={uName}
-                    onChange={(e) =>{
-                        setUName(e.target.value)
-                    }}
-                    />
+                    <input type="text" className="form-control bg-dark text-light"  id="inputNombre" placeholder="Pon tu Nombre" value={uName} onChange={(e) =>{setUName(e.target.value)}}/>
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputLastname">Apellido</label>
-                    <input type="text" className="form-control bg-dark text-light"
-                    id="inputLastName"
-                    placeholder="Apellido"
-                    value={lastName}
-                    onChange={(e) =>{
-                        setLastName(e.target.value)
-                    }}
-                    />
+                    <input type="text" className="form-control bg-dark text-light" id="inputLastName" placeholder="Apellido" value={lastName} onChange={(e) =>{setLastName(e.target.value)}}/>
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputPhone">Telefono</label>
-                    <input type="text" className="form-control bg-dark text-light"
-                    id="inputPhone"
-                    placeholder="Telefono"
-                    value={phone}
-                    onChange={(e) =>{
-                        setPhone(e.target.value)
-                    }}
-                    />
+                    <input type="text" className="form-control bg-dark text-light" id="inputPhone" placeholder="Telefono" value={phone} onChange={(e) =>{setPhone(e.target.value)}}/>
                 </div>
             </div>
             <div className="form-row row">
                 <div className="form-group col-md-4">
                     <label for="inputEmail">E-mail</label>
-                    <input type="email" className="form-control bg-dark text-light"
-                    id="inputEmail"
-                    placeholder="E-mail"
-                    value={email}
-                    onChange={(e) =>{
-                        setEmail(e.target.value)
-                    }}
-                    />
+                    <input type="email" className="form-control bg-dark text-light"  id="inputEmail"  placeholder="E-mail"  value={email}  onChange={(e) =>{setEmail(e.target.value)}}/>
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputAddress">Dirección</label>
-                    <input type="text" className="form-control bg-dark text-light"
-                    id="inputAddress"
-                    placeholder="Calle, Altura, Ciudad, Estado, departamento, codigo postal, etc"
-                    value={address}
-                    onChange={(e) =>{
-                        setAddress(e.target.value)
-                    }}
-                    />
+                    <input type="text" className="form-control bg-dark text-light" id="inputAddress" placeholder="Calle, Altura, Ciudad, Estado, departamento, codigo postal, etc" value={address} onChange={(e) =>{setAddress(e.target.value)}}/>
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputMessage">Mensaje</label>
-                    <input type="text" className="form-control bg-dark text-light"
-                    id="inputMessage"
-                    placeholder="Mensaje"
-                    value={message}
-                    onChange={(e) =>{
-                        setMessage(e.target.value)
-                    }}
-                    />
+                    <input type="text" className="form-control bg-dark text-light" id="inputMessage" placeholder="Mensaje" value={message} onChange={(e) =>{setMessage(e.target.value)}}/>
                 </div>
             </div>
-
-            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit}
-            disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "")}>
-            Guardar</button>
+            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit} disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "")}>
+                Finalizar la Compra
+            </button>
         </form>
-        </div>
+    </div>
     </>
 )}
 export default formContact;

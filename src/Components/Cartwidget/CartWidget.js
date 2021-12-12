@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {Link} from 'react-router-dom'
-import { MdShoppingCart } from 'react-icons/md';
-import { Context } from '../../Context/CartContext'
+import {MdShoppingCart} from 'react-icons/md';
+import {Context} from '../../Context/CartContext'
 import {Button} from 'react-bootstrap'
 
 const CartWidget = () => {
