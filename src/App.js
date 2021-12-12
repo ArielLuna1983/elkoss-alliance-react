@@ -14,7 +14,7 @@ export default function App() {
     <>
       <BrowserRouter>
       <CartFunction>
-        <Navbar />
+        <Navbar/>
         <Switch>
           <Route exact path="/" >
             <ItemListContainer  titulo='Arma tu Computadora'/>

@@ -37,7 +37,7 @@ const ItemDetail=({id, nombre, desc, tipo, precio, imagen, stock, categoria})=>{
                     {!buy ? <ItemCount stock={stock} onAdd={agregar}/> :
                         <div className='d-flex flex-row mx-auto mt-5 mb-3'>
                             <Button as={Link} to='/cart' className='mx-2 mt-5 btn btn-success'>Terminar Compra</Button>
-                            <Button as={Link} to='/' className='mx-2 mt-5 btn bg-dark btn-outline-light'>Volver a inicio</Button>
+                            <Button as={Link} to='/' className='mx-2 mt-5 btn bg-dark btn-outline-light'>Volver a la Tienda</Button>
                         </div>}
                 </div>
 

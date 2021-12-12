@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { collection, query, getDocs, where } from "firebase/firestore";
-import { getFirestoreDb } from "../../data/firebaseConfig";
+import {collection, query, getDocs, where} from "firebase/firestore";
+import {getFirestoreDb} from "../../data/firebaseConfig";
 import ItemList from "./ItemList/ItemList";
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
+
 const ItemListContainer = (props) => {
   const db = getFirestoreDb();
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
-  const { categoryId, typeId } = useParams();
+  const {categoryId, typeId} = useParams();
 
   useEffect(() => {
     const getProductById = async () => {
