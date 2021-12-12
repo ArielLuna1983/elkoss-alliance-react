@@ -29,6 +29,4 @@
 
 - [Ariel Leonardo Luna](https://github.com/ArielLuna1983)
 
-# react-rruv1y
-
 [Find it on GitHUb ](https://github.com/ArielLuna1983/elkoss-alliance-react)
