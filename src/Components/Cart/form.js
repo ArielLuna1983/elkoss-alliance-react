@@ -76,7 +76,7 @@ return(
             <div className="form-row row">
                 <div className="form-group col-md-4">
                     <label for="inputEmail">E-mail</label>
-                    <input type="email" className="form-control bg-dark text-light"  id="inputEmail"  placeholder="E-mail"  value={email}  onChange={(e) =>{setEmail(e.target.value)}}/>
+                    <input type="email" className="form-control bg-dark text-light"  id="inputEmail"  placeholder="E-mail"  value={email}  required onChange={(e) =>{setEmail(e.target.value)}}/>
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputAddress">Dirección</label>
@@ -84,10 +84,10 @@ return(
                 </div>
                 <div className="form-group col-md-4">
                     <label for="inputMessage">Mensaje</label>
-                    <input type="text" className="form-control bg-dark text-light" id="inputMessage" placeholder="Mensaje (Opcional)" value={message} onChange={(e) =>{setMessage(e.target.value)}}/>
+                    <input type="text" className="form-control bg-dark text-light" id="inputMessage" placeholder="Mensaje" value={message} onChange={(e) =>{setMessage(e.target.value)}}/>
                 </div>
             </div>
-            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit} disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "")}>
+            <button href='/' type="submit" className="mt-3 mx-auto btn btn-outline-success mx-auto" onClick={onSubmit} disabled={!(uName !== "" && lastName !== "" && phone !== "" && email !== "" && address !== "" && message !== "")}>
                 Finalizar la Compra
             </button>
         </form>
