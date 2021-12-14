@@ -11,7 +11,7 @@ const Cart = () =>{
         <>
         <div className="container justify-center d-flex mx-auto row bg-dark text-light">
         <div className="text-light text-center mt-3 mb-3">
-            <h5>Tu compre es de <span className='text-info'>{unidades} unidades</span></h5>
+            <h5>Tu compra es de <span className='text-info'>{unidades} unidades</span></h5>
             <h4>Por un total de <span className='text-success'>${total}</span></h4>
         </div>
         {cart.map((item)=>
